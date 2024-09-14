@@ -105,13 +105,22 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(76 63 68 / 50%);
-    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1; /* Define o z-index da sobreposição */
 }
 
 .hero h1,
-.hero p {
-    z-index: 2;
+.hero p,
+.hero a {
+    position: relative;
+    z-index: 2; /* Garante que o conteúdo esteja acima da sobreposição */
+}
+
+.btn {
+    /* ... outras propriedades ... */
+    cursor: pointer;
+    position: relative; /* Garante que o z-index funcione corretamente */
+    z-index: 2; /* Garante que o botão esteja acima da sobreposição */
 }
 
 .hero h1 {
@@ -539,4 +548,24 @@ section a:hover {
     #countdown div p {
         font-size: 14px;
     }
+}
+
+/* Estilo para o botão */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #d81b60;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 30px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    cursor: pointer; /* Adicionado */
+    position: relative; /* Adicionado */
+    z-index: 2; /* Adicionado */
+}
+
+.btn:hover {
+    background-color: #c2185b;
 }
