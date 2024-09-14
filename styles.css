@@ -569,3 +569,54 @@ section a:hover {
 .btn:hover {
     background-color: #c2185b;
 }
+
+/* Estilos para a Seção Sobre Nós */
+.sobre-nos-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.sobre-nos-conteudo .texto {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 20px;
+}
+
+.sobre-nos-conteudo .texto p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.sobre-nos-conteudo .imagem {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+.sobre-nos-conteudo .imagem img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    .sobre-nos-conteudo {
+        flex-direction: column;
+    }
+
+    .sobre-nos-conteudo .texto,
+    .sobre-nos-conteudo .imagem {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
