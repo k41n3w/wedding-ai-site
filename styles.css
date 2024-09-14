@@ -1,0 +1,542 @@
+/* Importando a fonte 'Poppins' */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('https://img.freepik.com/fotos-gratis/vista-superior-da-pomba-de-papel-com-flores-de-papel_23-2148630375.jpg?t=st=1726332377~exp=1726335977~hmac=4b6afe099a15b09264bb8155a40a97f16e91cebdf20618781edb3a7749cde130&w=1380');
+    background-size: auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #f0e6f6;
+    /* Cor semelhante à textura */
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 0 20px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Tornar o fundo da navbar semi-transparente */
+
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d81b60;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #d81b60;
+}
+
+/* Ícone de Menu para Mobile */
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1603584397340-7718e53a552e?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(76 63 68 / 50%);
+    z-index: 1;
+}
+
+.hero h1,
+.hero p {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+/* Seções */
+section {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Fundo branco com transparência */
+    padding: 80px 20px;
+    /* Ajuste do padding devido ao fundo transparente */
+    margin: 20px;
+    border-radius: 10px;
+    background-color: #dbdbdb;
+    /* Cor semelhante à textura */
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #d81b60;
+}
+
+section p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+section a {
+    color: #d81b60;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+section a:hover {
+    text-decoration: underline;
+}
+
+/* Contagem Regressiva */
+#countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+#countdown div {
+    margin: 0 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#countdown div span {
+    font-size: 48px;
+    color: #d81b60;
+    display: block;
+}
+
+#countdown div p {
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsividade para a seção de presentes */
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os cards */
+    }
+
+    .card {
+        width: 80%;
+        /* Ajusta a largura dos cards */
+        margin: 15px auto;
+        /* Centraliza o card horizontalmente */
+    }
+
+    .card h3 {
+        font-size: 20px;
+        /* Ajusta o tamanho da fonte para melhor legibilidade */
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
+
+/* Cards de Presentes */
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    background-color: #fff;
+    width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #d81b60;
+}
+
+.card p {
+    padding: 0 15px 15px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Efeito Hover no Card */
+.card:hover,
+.card.hover-effect {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsividade para a seção de presentes */
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+/* Responsividade para a seção de presentes */
+@media screen and (max-width: 768px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        /* Centraliza os cards */
+    }
+
+    .card {
+        width: 80%;
+        /* Ajusta a largura dos cards */
+        margin: 15px auto;
+        /* Centraliza o card horizontalmente */
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: #fff;
+        flex-direction: column;
+        align-items: center;
+        width: 70%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in-out;
+        padding-top: 80px;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    /* Animação do Ícone de Menu */
+    .toggle .linha1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .linha2 {
+        opacity: 0;
+    }
+
+    .toggle .linha3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* Ajuste da Hero Section */
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    /* Ajuste dos Cards */
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Mapa e Foto */
+    .mapa img {
+        width: 80%;
+    }
+}
+
+/* Mapa e Foto na Seção Contatos */
+.mapa {
+    display: flex;
+    flex-direction: row;
+    /* Alinha imagem e mapa lado a lado */
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Permite quebra de linha em telas menores */
+    margin-top: 40px;
+}
+
+.mapa img,
+.mapa iframe {
+    width: 45%;
+    /* Define a largura de ambos para 45% */
+    height: auto;
+    /* Mantém a proporção da altura */
+    margin: 10px;
+    border-radius: 10px;
+    /* Adiciona estilos consistentes */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 768px) {
+
+    .mapa img,
+    .mapa iframe {
+        width: 100%;
+        /* Em telas menores, ambos ocupam 100% da largura */
+        margin: 10px 0;
+    }
+
+    .mapa {
+        flex-direction: column;
+        /* Empilha a imagem e o mapa verticalmente */
+    }
+}
+
+
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+/* Animação dos Links do Menu */
+@media screen and (max-width: 768px) {
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .nav-links li:nth-child(1) {
+        animation: navLinkFade 0.5s ease forwards 0.2s;
+    }
+
+    .nav-links li:nth-child(2) {
+        animation: navLinkFade 0.5s ease forwards 0.4s;
+    }
+
+    .nav-links li:nth-child(3) {
+        animation: navLinkFade 0.5s ease forwards 0.6s;
+    }
+
+    .nav-links li:nth-child(4) {
+        animation: navLinkFade 0.5s ease forwards 0.8s;
+    }
+
+    .nav-links li:nth-child(5) {
+        animation: navLinkFade 0.5s ease forwards 1s;
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+    }
+}
+
+/* Hover dos Botões da Navbar */
+.nav-links li a:hover {
+    color: #d81b60;
+    border-bottom: 2px solid #d81b60;
+    padding-bottom: 5px;
+}
+
+.map_router {
+    display: table;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    position: relative;
+    height: 400px;
+    width: 590px;
+    background: #fff;
+}
+
+
+.gmap_canvas a {
+    color: #fff !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 0 !important;
+}
+
+/* Contagem Regressiva */
+#countdown {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem linha em telas menores */
+}
+
+#countdown div {
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 150px;
+    /* Ajuste da largura para melhor responsividade */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+#countdown div span {
+    font-size: 48px;
+    color: #d81b60;
+    display: block;
+}
+
+#countdown div p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    #countdown div {
+        width: 120px;
+        padding: 15px;
+    }
+
+    #countdown div span {
+        font-size: 36px;
+    }
+
+    #countdown div p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #countdown {
+        flex-direction: column;
+        /* Empilha os blocos verticalmente */
+        align-items: center;
+    }
+
+    #countdown div {
+        width: 80%;
+        /* Ocupa 80% da largura da tela */
+        margin: 10px 0;
+    }
+
+    #countdown div span {
+        font-size: 32px;
+    }
+
+    #countdown div p {
+        font-size: 14px;
+    }
+}
